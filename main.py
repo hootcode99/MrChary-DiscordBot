@@ -3,7 +3,7 @@ import discord
 # Create new discord client agent
 chary_client = discord.Client()
 # store API token
-token = 'OTYxMzA4MjUwMTk0NzM5Mjkx.Yk3GEw.J37_jdBPBbuW7DsPUqa0KgFNSnk'
+token = '[removed]'
 target_string = ' chary'
 target_tag = 'stay'
 
