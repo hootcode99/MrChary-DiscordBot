@@ -23,7 +23,8 @@ def remove_punctuation(message):
 # Verify Bot is connected and ready
 @chary_client.event
 async def on_ready():
-    print("Mr. Chary is online and here to stay")
+    print("Mr. Chary is online and here to stay\n")
+    print("--------------------------------------")
 
 # When a message is posted in any channel
 @chary_client.event
@@ -34,22 +35,20 @@ async def on_message(message):
     # ignore messages from itself
     if message.author == chary_client.user:
         return
-
     elif "participated" in clear_post:
         print(f"{message.author}: {message.content[:70]}")
-        print(f"RESPONSE-> {thank}")
+        print(f"RESPONSE-> {thank}\n")
         await message.channel.send(thank)
-      
     # the post matches the sample string
     elif target_string in clear_post:
         print(f"{message.author}: {message.content[:70]}")
         if target_tag in clear_post:
             # respond
-            print(f"RESPONSE->I am here to stay")
+            print(f"RESPONSE->I am here to stay\n")
             await message.channel.send('I am here to stay')
         else:
-            print(f"RESPONSE->I am here")
+            print(f"RESPONSE->I am here\n")
             await message.channel.send('I am here')
-          
+
 # token confirmation to communicate with Discord API
 chary_client.run(my_secret)
